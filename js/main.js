@@ -26,3 +26,21 @@ const getCountOfArrValues = (arr) => {
 //   const arr = [2,3,51,3,6]
 //   arraySort(arr)
 //   console.log(arr) // => [2, 3, 3, 6, 51]
+
+const arraySort = (arr) => {
+  let stepsCount = arr.length - 1;
+  let swap;
+  do {
+    swap = false;
+    for (let i = 0; i < stepsCount; i++) {
+      if (arr[i] > arr[i + 1]) {
+        const temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swap = true;
+      }
+    }
+    stepsCount -= 1;
+  } while (swap);
+  return arr;
+};
