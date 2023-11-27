@@ -9,11 +9,18 @@ const createRandomArr = (length) => {
   }
   return arr;
 };
-void createRandomArr;
 
 // 2. Написать функцию, которая принимает на вход одномерный массив и возвращает объект который содержит информацию о количестве вхождений каждого значения.
 //   getCountOfArrValues([1, 2, 3, 1, 2, 4]) // => {1: 2, 2: 2, 3: 1, 4: 1}
 //   getCountOfArrValues(['Ivan', 'Fedor', 'Ivan', 'Vasya', 'Petya']) // => {'Ivan': 2, 'Fedor': 1, 'Petya': 1, 'Vasya': 1}
+
+const getCountOfArrValues = (arr) => {
+  const verification = arr.reduce((acc, value) => {
+    acc[value] = (acc[value] || 0) + 1;
+    return acc;
+  }, {});
+  return verification;
+};
 
 // 3. Написать функцию, которая принимает на вход одномерный числовой массив и сортирует его. В этой задаче нельзя использовать встроенный метод сортировки Array.sort(). Сортировка должна быть выполнена любым подходящим алгоритмом (например: пузырьком, вставками, слиянием и т.п.)
 //   const arr = [2,3,51,3,6]
