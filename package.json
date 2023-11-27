@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "25.0.0",
+  "private": true,
+  "description": "test",
+  "repository": {
+    "type": "git",
+    "url": "{{sshUrl}}"
+  },
+  "bugs": {},
+  "devDependencies": {
+    "browser-sync": "2.27.7",
+    "eslint": "8.7.0",
+    "eslint-config-htmlacademy": "5.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
+    "lint": "eslint js/"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  }
+}
